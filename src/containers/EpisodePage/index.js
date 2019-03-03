@@ -10,8 +10,8 @@ const EpisodePage = ({ match }) => {
     fetchEpisode(match.params.id);
   }, []);
 
-  async function fetchEpisode(id) {
-    const fetchedEpisode = await cFetch('/episode/' + id);
+  async function fetchEpisode(episodeId) {
+    const fetchedEpisode = await cFetch('/episode/' + episodeId);
     if (!fetchedEpisode.hasError) {
       setEpisode(fetchedEpisode);
     }
