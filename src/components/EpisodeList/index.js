@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import cFetch from '../../utility/fetch';
-import Episode from '../Episode';
+import EpisodeListItem from './EpisodeListItem';
 
 const EpisodeList = () => {
   const [episodes, setEpisodes] = useState([]);
@@ -20,7 +20,7 @@ const EpisodeList = () => {
       {episodes.length === 0
         ? 'Loading...'
         : episodes.map(episode => {
-            return <Episode key={episode.id} episodeData={episode} />;
+            return <EpisodeListItem key={episode.id} episodeData={episode} />;
           })}
     </section>
   );
