@@ -1,10 +1,13 @@
 import React from 'react';
 
+import EpisodeList from './components/EpisodeList';
+
 const App = () => {
   return (
-    <div>
-      <h1>Rock and Morty!</h1>
-    </div>
+    <>
+      <h1>Rick and Morty!</h1>
+      <EpisodeList />
+    </>
   );
 };
 
