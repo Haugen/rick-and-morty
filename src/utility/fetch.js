@@ -1,7 +1,7 @@
 import { BASE_URL } from './helpers';
 
 // Generalized function for making calls to the API.
-export default async resource => {
+const cFetch = async resource => {
   const options = {
     method: 'GET'
   };
@@ -13,9 +13,11 @@ export default async resource => {
     if (response.ok) {
       return result;
     } else {
-      throw new Error('STILL IN TRY. Something went wrong.');
+      throw new Error();
     }
   } catch (error) {
-    throw new Error('CATCH. Something went wrong.' + error);
+    return error;
   }
 };
+
+export default cFetch;
