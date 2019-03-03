@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const EpisodeListItem = ({ episodeData }) => {
   return (
     <>
-      <article className="episode">
+      <article className="episode-list-item">
         <ul>
           <li>ID: {episodeData.id}</li>
           <li>Name: {episodeData.name}</li>

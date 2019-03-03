@@ -16,7 +16,10 @@ const cFetch = async resource => {
       throw new Error();
     }
   } catch (error) {
-    return error;
+    return {
+      hasError: true,
+      errorMessage: error
+    };
   }
 };
 

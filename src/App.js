@@ -3,6 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import EpisodeList from './components/EpisodeList';
+import EpisodePage from './containers/EpisodePage';
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <Router>
         <Switch>
           <Route exact path="/" component={EpisodeList} />
+          <Route exact path="/episode/:id" component={EpisodePage} />
         </Switch>
       </Router>
     </>
