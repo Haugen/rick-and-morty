@@ -15,11 +15,15 @@ const EpisodeList = () => {
     setEpisodes(fetchedEpisodes.results);
   }
 
-  return episodes.length > 0
-    ? episodes.map(episode => {
-        return <Episode key={episode.id} id={episode.id} />;
-      })
-    : 'Loading...';
+  return (
+    <section className="episode-list">
+      {episodes.length === 0
+        ? 'Loading...'
+        : episodes.map(episode => {
+            return <Episode key={episode.id} episodeData={episode} />;
+          })}
+    </section>
+  );
 };
 
 export default EpisodeList;
