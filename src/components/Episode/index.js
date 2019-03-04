@@ -6,7 +6,15 @@ const Episode = ({ episodeData }) => {
   ) : (
     <>
       <article className="episode">
-        <h2>{episodeData.name}</h2>
+        <h1>{episodeData.name}</h1>
+        <ul>
+          <li>
+            <span>Episode:</span> {episodeData.episode}
+          </li>
+          <li>
+            <span>Air date:</span> {episodeData.air_date}
+          </li>
+        </ul>
       </article>
     </>
   );

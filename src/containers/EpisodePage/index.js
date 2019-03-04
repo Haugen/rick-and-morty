@@ -11,7 +11,7 @@ const EpisodePage = ({ match }) => {
 
   useEffect(() => {
     fetchEpisode(match.params.id);
-    if (episode) fetchCharacters(episode);
+    if (episode) fetchCharacters();
   }, [episode]);
 
   async function fetchEpisode(episodeId) {
@@ -21,8 +21,8 @@ const EpisodePage = ({ match }) => {
     }
   }
 
-  async function fetchCharacters(fetchedEpisode) {
-    const characterIds = getIdsFromUrl(fetchedEpisode.characters);
+  async function fetchCharacters() {
+    const characterIds = getIdsFromUrl(episode.characters);
     const fetchedCharacters = await cFetch('/character/' + characterIds);
     if (!fetchedCharacters.hasError) {
       setCharacters(fetchedCharacters);
