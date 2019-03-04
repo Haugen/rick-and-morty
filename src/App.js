@@ -5,6 +5,9 @@ import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import EpisodeList from './components/EpisodeList';
 import EpisodePage from './containers/EpisodePage';
 
+import './styles/base.scss';
+import './styles/grid.scss';
+
 const App = () => {
   return (
     <Router>
