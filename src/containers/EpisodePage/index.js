@@ -12,6 +12,9 @@ const EpisodePage = ({ match }) => {
 
   useEffect(() => {
     fetchEpisode(match.params.id);
+  }, []);
+
+  useEffect(() => {
     if (episode) fetchCharacters();
   }, [episode]);
 
