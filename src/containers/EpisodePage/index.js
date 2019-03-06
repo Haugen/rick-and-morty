@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import cFetch from '../../utility/fetch';
 import Episode from '../../components/Episode';
 import CharacterList from '../../components/CharacterList';
+import Layout from '../../components/Layout';
 import { getIdsFromUrl } from '../../utility/helpers';
 
 const EpisodePage = ({ match }) => {
@@ -29,12 +30,10 @@ const EpisodePage = ({ match }) => {
     }
   }
 
-  return (
-    <>
-      <Episode episodeData={episode} />
-      <CharacterList characters={characters} />
-    </>
-  );
+  const renderHeader = <Episode episodeData={episode} />;
+  const renderMain = <CharacterList characters={characters} />;
+
+  return <Layout header={renderHeader} main={renderMain} />;
 };
 
 export default EpisodePage;

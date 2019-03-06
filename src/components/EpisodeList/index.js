@@ -16,16 +16,13 @@ const EpisodeList = () => {
   }
 
   return (
-    <>
-      <h1>Rick and Morty episodes!</h1>
-      <section className="episode-list">
-        {episodes.length === 0
-          ? 'Loading...'
-          : episodes.map(episode => {
-              return <EpisodeListItem key={episode.id} episodeData={episode} />;
-            })}
-      </section>
-    </>
+    <section className="episode-list">
+      {episodes.length === 0
+        ? 'Loading...'
+        : episodes.map(episode => {
+            return <EpisodeListItem key={episode.id} episodeData={episode} />;
+          })}
+    </section>
   );
 };
 

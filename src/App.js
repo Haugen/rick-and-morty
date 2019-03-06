@@ -2,7 +2,7 @@ import React from 'react';
 
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 
-import EpisodeList from './components/EpisodeList';
+import FrontPage from './containers/FrontPage';
 import EpisodePage from './containers/EpisodePage';
 
 import './styles/base.scss';
@@ -14,7 +14,7 @@ const App = () => {
       <>
         <Link to="/">Rick and Morty!</Link>
         <Switch>
-          <Route exact path="/" component={EpisodeList} />
+          <Route exact path="/" component={FrontPage} />
           <Route exact path="/episode/:id" component={EpisodePage} />
         </Switch>
       </>
