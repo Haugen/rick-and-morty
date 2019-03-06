@@ -12,7 +12,9 @@ const App = () => {
   return (
     <Router>
       <>
-        <Link to="/">Rick and Morty!</Link>
+        <header id="toolbar">
+          <Link to="/">Rick and Morty!</Link>
+        </header>
         <Switch>
           <Route exact path="/" component={FrontPage} />
           <Route exact path="/episode/:id" component={EpisodePage} />

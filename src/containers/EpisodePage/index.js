@@ -30,7 +30,12 @@ const EpisodePage = ({ match }) => {
     }
   }
 
-  const renderHeader = <Episode episodeData={episode} />;
+  const renderHeader = (
+    <>
+      <h1>{episode ? episode.name : ''}</h1>
+      <Episode episodeData={episode} />
+    </>
+  );
   const renderMain = <CharacterList characters={characters} />;
 
   return <Layout header={renderHeader} main={renderMain} />;

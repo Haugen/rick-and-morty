@@ -18,19 +18,19 @@ const CharacterListItem = ({ characterData }) => {
         <h2>{name}</h2>
         <ul>
           <li>
-            <span>Status:</span> {status}
+            <strong>Status:</strong> {status}
           </li>
           <li>
-            <span>Species:</span> {species}
+            <strong>Species:</strong> {species}
           </li>
           <li>
-            <span>Gender:</span> {gender}
+            <strong>Gender:</strong> {gender}
           </li>
           <li>
-            <span>Origin:</span> {origin.name}
+            <strong>Origin:</strong> {origin.name}
           </li>
           <li>
-            <span>Location:</span> {location.name}
+            <strong>Location:</strong> {location.name}
           </li>
         </ul>
       </div>
