@@ -1,6 +1,6 @@
 // Base URL for API.
-// module.exports.BASE_URL = 'https://rickandmortyapi.com/api';
-module.exports.BASE_URL = 'http://localhost:3001';
+module.exports.BASE_URL = 'https://rickandmortyapi.com/api';
+// module.exports.BASE_URL = 'http://localhost:3001';
 
 // Helper function used to extract an array of ids based on an array of urls.
 module.exports.getIdsFromUrl = urls => {
